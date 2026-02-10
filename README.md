@@ -1,27 +1,89 @@
-# AngularStarter
+# Angular Enterprise Starter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.20.
+A clean and reusable **Angular project structure (skeleton)** built using **Standalone APIs** and **feature-based architecture**.
 
-## Development server
+> This repository provides **project architecture and folder structure only**.  
+> It is intended to be used as a **starting point** for building enterprise Angular applications.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Purpose
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This starter helps developers quickly bootstrap:
 
-## Build
+- ERP systems
+- Admin dashboards
+- Large-scale business applications
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+by providing a **clean, scalable, and opinionated folder structure** without enforcing any business logic or UI framework.
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Project Structure
 
-## Running end-to-end tests
+```txt
+src/
+├── app/
+│   ├── core/               # Global services, interceptors, guards
+│   ├── environments/       # Environment configuration
+│   ├── pages/              # Application pages (features)
+│   ├── shared/             # Reusable UI components & utilities
+│   ├── app.config.ts       # ApplicationConfig (global providers)
+│   └── app.routes.ts       # Application routing (standalone)
+│
+├── assets/                 # Static assets
+├── main.ts
+└── styles.scss
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Architecture Principles
 
-## Further help
+Standalone First
+Uses Angular Standalone Components & Providers (no NgModules).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Feature-Based Pages
+Each page represents a business feature and is isolated.
+
+Clear Separation of Concerns
+
+core: application-wide logic
+
+shared: pure reusable UI & helpers
+
+pages: business features
+
+How to Use
+1️⃣ Clone or use as a template
+git clone https://github.com/USERNAME/angular-enterprise-starter.git
+
+Or click "Use this template" on GitHub.
+
+2️⃣ Install dependencies
+npm install
+
+# or
+
+yarn install
+
+3️⃣ Start building your app
+ng serve
+
+Start by:
+
+Creating pages inside pages/
+
+Adding routes to app.routes.ts
+
+Implementing global services inside core/
+
+🧩 What This Template Does NOT Include
+
+❌ No UI framework enforced
+
+❌ No authentication logic
+
+❌ No business services
+
+❌ No predefined components
+
+This is intentional to keep the starter lightweight, flexible, and reusable.
